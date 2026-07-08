@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chopped Image Cursor Trail</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="hero" aria-label="Chopped image cursor trail hero">
+      <div class="grid-floor" aria-hidden="true"></div>
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
+
+      <section class="hero-copy">
+        <p class="eyebrow">Image trail experiment</p>
+      </section>
+
+      <aside class="control-panel">
+        <h2>Controls</h2>
+        <div class="control-group">
+          <label for="size-slider">Image Size</label>
+          <input type="range" id="size-slider" min="0.5" max="2" step="0.1" value="1.25">
+        </div>
+        <div class="control-group">
+          <label for="speed-slider">Animation Speed</label>
+          <input type="range" id="speed-slider" min="0.1" max="3" step="0.1" value="1.7">
+        </div>
+        <div class="control-group">
+          <label for="slices-slider">Number of Layers</label>
+          <input type="range" id="slices-slider" min="2" max="60" step="1" value="60">
+        </div>
+        <div class="control-group">
+          <label for="duration-slider">Display Duration</label>
+          <input type="range" id="duration-slider" min="0" max="5" step="0.1" value="0.4">
+        </div>
+        <div class="control-group">
+          <label>Image Ratio</label>
+          <div class="ratio-selector">
+            <button type="button" class="ratio-btn" data-ratio="1.1">1.1:1</button>
+            <button type="button" class="ratio-btn" data-ratio="1">1:1</button>
+            <button type="button" class="ratio-btn" data-ratio="1.333">4:3</button>
+            <button type="button" class="ratio-btn active" data-ratio="1.777">16:9</button>
+            <button type="button" class="ratio-btn" data-ratio="0.75">3:4</button>
+            <button type="button" class="ratio-btn" data-ratio="0.562">9:16</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>Animation Style</label>
+          <div class="style-selector">
+            <button type="button" class="style-btn" data-style="center-h">Center H</button>
+            <button type="button" class="style-btn" data-style="center-v">Center V</button>
+            <button type="button" class="style-btn" data-style="top-bottom">Top - Bottom</button>
+            <button type="button" class="style-btn" data-style="bottom-top">Bottom - Top</button>
+            <button type="button" class="style-btn active" data-style="left-right">Left - Right</button>
+            <button type="button" class="style-btn" data-style="right-left">Right - Left</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>Layer Origin</label>
+          <div class="origin-selector">
+            <button type="button" class="origin-btn active" data-origin="start">Top/Left</button>
+            <button type="button" class="origin-btn" data-origin="center">Middle</button>
+            <button type="button" class="origin-btn" data-origin="end">Bottom/Right</button>
+          </div>
+        </div>
+        <button type="button" class="reset-btn" id="reset-btn">Reset to Default</button>
+      </aside>
+
+      <canvas class="trail-canvas" aria-hidden="true"></canvas>
+      <div class="cursor-arrow" aria-hidden="true"></div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
