@@ -1,5 +1,5 @@
 :root {
-  --bg: #030303;
+  --bg: #000000;
   --ink: #f7f7ef;
   --muted: #9b9b92;
   --lime: #d9ff43;
@@ -34,13 +34,11 @@ body {
   width: 100%;
   isolation: isolate;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 80% 70%, rgba(217, 255, 67, 0.18), transparent 12rem),
-    radial-gradient(circle at 18% 82%, rgba(73, 247, 255, 0.14), transparent 10rem),
-    linear-gradient(180deg, #070707 0%, #020202 78%);
+  background: #000000;
 }
 
 .hero::before {
+  display: none;
   content: "";
   position: absolute;
   inset: 0;
@@ -55,6 +53,7 @@ body {
 }
 
 .hero::after {
+  display: none;
   content: "";
   position: absolute;
   inset: 0;
@@ -69,6 +68,7 @@ body {
 }
 
 .grid-floor {
+  display: none;
   position: absolute;
   left: 50%;
   bottom: -23vh;
@@ -86,6 +86,7 @@ body {
 }
 
 .ambient {
+  display: none;
   position: absolute;
   z-index: 1;
   width: 20rem;
@@ -141,6 +142,7 @@ h1 {
 
 /* ── Control Panel ── */
 .control-panel {
+  display: none;
   position: absolute;
   top: 2rem;
   right: 2rem;
