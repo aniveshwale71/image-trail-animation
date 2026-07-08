@@ -44,7 +44,7 @@ imageSources.forEach((src, i) => {
 /* ── config ── */
 let SLICES = 60;
 const CORNER_TAPER = 2; // how many slices from edges get tapered width
-const MAX_IMAGES = 20;
+const MAX_IMAGES = 150;
 const SPACING = 60; // min px distance between emits
 
 /* ── controls state ── */
@@ -455,7 +455,9 @@ class TrailImage {
 
 /* ── emit a new trail image ── */
 function emitImage() {
-  if (trailImages.length >= MAX_IMAGES) return;
+  if (trailImages.length >= MAX_IMAGES) {
+    trailImages.shift();
+  }
   if (mouse.x === -1 && mouse.y === -1) return;
 
   const ex = mouse.sx;
